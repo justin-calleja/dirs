@@ -1,0 +1,41 @@
+{
+  "name": "@justinc/dirs",
+  "version": "1.0.0",
+  "description": "read directory names given path:string or path:string[]",
+  "main": "lib/index.js",
+  "typings": "./lib/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf ./lib && mkdir ./lib",
+    "build": "npm run clean && tsc -p ./tsconfig.json",
+    "prepublish": "npm run test",
+    "preversion": "npm run test",
+    "postversion": "git push origin master && git push --tags",
+    "pretest": "npm run build",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justin-calleja/dirs.git"
+  },
+  "author": "Justin Calleja <calleja.justin@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justin-calleja/dirs/issues"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "typescript": "^1.8.10",
+    "typings": "^1.3.0"
+  },
+  "dependencies": {
+    "async": "^2.0.1"
+  },
+  "keywords": [
+    "read directory",
+    "read directory names",
+    "read directory names in path",
+    "read directory names in paths"
+  ]
+  "homepage": "https://github.com/justin-calleja/dirs#readme"
+}
